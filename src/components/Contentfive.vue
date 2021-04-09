@@ -6,8 +6,12 @@
                 <h4>23套测评题目全维更权威</h4>
                 <p>牵手清华、北大、人大等多位心理学教授、博士进行研发的23套测评题型为政府、学校、家长、孩子通过全面的、权威的心理测评报告，多个维度进行分析</p>
             </div>
-            <div class="btn-left"></div>
-            <div class="btn-right"></div>
+            <div class="btn-left">
+                <i class="icon-about-information-last"></i>
+            </div>
+            <div class="btn-right">
+                <i class="icon-about-information-next"></i>
+            </div>
         </div>
         <div class="fi-b-box">
             <div class="fi-bot-box">
@@ -31,15 +35,24 @@
             <div class="fi-bot-box">
                 <h4>关注我们</h4>
                 <div class="icon-img-box">
-                    <div  @click="BfunShow">  
+                    <div  @mouseover="BfunShow" @mouseout="BfunShow" >  
+                        <i class="icon-home-footer-wechat"></i>
                     </div>
-                    <div></div>
-                    <div></div>
+                    <div><i class="icon-home-footer-tiktok"></i></div>
+                    <div><i class="icon-home-footer-weibo"></i></div>
                 </div>
                 <div class="webchat-img" v-show="ishow">
                    <h6>微信订阅号</h6>
                    <img src="../assets/images/home-footer-QRcode.png" alt="">
                 </div>
+                <!-- <div class="webchat-img2" v-show="ishow">
+                   <h6>抖音</h6>
+                   <img src="../assets/images/home-footer-QRcode.png" alt="">
+                </div> -->
+                <!-- <div class="webchat-img3" v-show="ishow">
+                   <h6>微博</h6>
+                   <img src="../assets/images/home-footer-QRcode.png" alt="">
+                </div> -->
                 <div class="icon-img-box">
                     <p>微信</p>
                     <p>抖音</p>
@@ -66,19 +79,20 @@ export default {
     },
     methods: {
         BfunShow(){
-            this.ishow=!this.ishow
+            this.ishow=! this.ishow
         }
     }
 }
 </script>
 <style scoped>
-.f-box{
+		.f-box{
         width: 16rem;
         height: 5.25rem;
         position: absolute;
         left: 50%;
         margin-left: -8rem;
         top: -2.625rem;
+				box-shadow: 0 2px 34px 0 rgba(4,37,83,0.10);
         display: flex;
         justify-content:space-between;
     }
@@ -119,6 +133,10 @@ export default {
         position: absolute;
         top: 50%;
         margin-top: -.5rem;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        cursor: pointer;
     }
     .btn-right{
         width: .625rem;
@@ -128,8 +146,20 @@ export default {
         right: 0;
         top: 50%;
         margin-top: -.5rem;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        cursor: pointer;
     }
-
+		.btn-left:hover,.btn-right:hover{
+			background: #4DACFF;
+		}
+		.btn-left:active,.btn-right:active{
+			background: #006ECD;
+		}
+		.btn-left>i,.btn-right>i{
+				color: #fff;
+		}
 
 
     .Contentfive-box{
@@ -177,7 +207,7 @@ export default {
     .icon-img-box{
         
         display: flex;
-         flex-wrap:wrap;
+        flex-wrap:wrap;
         justify-content:space-between;
        
     }
@@ -191,11 +221,17 @@ export default {
         height: .675rem;
         background: #00193B;
         border-radius: .025rem;
+        display: flex;
+        justify-content:center;
+        align-items:center;
     }
-
+    i{
+        font-size: .451rem;
+        color: #C3CEDE;
+    }
     .footer{
         height: 1.125rem;
-        border-top: .0125rem solid #FFFFFF;
+        border-top: 1px solid rgba(255,255,255,0.2);
         line-height:1.125rem;
         font-family: MicrosoftYaHei;
         font-size: .175rem;
@@ -210,9 +246,9 @@ export default {
         position: absolute;
         bottom: 1.35rem;
         left: -0.6rem;
- 
         padding: 0 .15rem .15rem .15rem ;
     }
+
     h6{
         margin-top: .15rem;
         font-family: MicrosoftYaHei;
@@ -226,5 +262,12 @@ export default {
         width: 1.5rem;
         height: 1.5rem;
         margin-top: .29rem;
+    }
+    .icon-about-information-last .icon-about-information-next{
+        font-size: .3625rem;
+        color: #ffffff;
+    }
+    .icon-home-footer-wechat:hover{
+        color:#0089FF;
     }
 </style>

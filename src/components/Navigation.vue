@@ -6,8 +6,25 @@
         <div class="navigation-nav2">
             <router-link to="" class="nav-text">首页</router-link>
             <router-link to="" class="nav-text">强基计划</router-link>
-            <div class="nav-text">产品与服务</div>
-            <div class="nav-text">关于我们</div>
+            <div class="nav-text" @mouseover="productSboxFun()" >{{product}} 
+                <i  v-bind:class="isActive? 'icon-home-bar-open':'icon-home-bar-retract'"></i>
+                <div class="contactBox"  v-show="productSbox" @mouseout="productSboxFunOut()">
+                    <div to="" class="contacttext" style="margin-top:0" @click="productSl('青少年生涯规划及职业发展服务平台')" >青少年生涯规划及职业发展服务平台</div>
+                    <div to="" class="contacttext" @click="productSl('青少年心理教育及成长引领AI云平台')">青少年心理教育及成长引领AI云平台</div>
+                    <div to="" class="contacttext" @click="productSl('青少年综合素质提升展播遴选平台')">青少年综合素质提升展播遴选平台</div>
+                    <div to="" class="contacttext" @click="productSl('教育舆情分析大数据平台')">教育舆情分析大数据平台</div>
+                    <div to="" class="contacttext" @click="productSl('学能测评及提升系统')">学能测评及提升系统</div>
+                </div>
+            </div>
+            <div class="nav-text" @mouseover="aboutSboxFun()">{{about}}
+                <i v-bind:class="isActiveT? 'icon-home-bar-open':'icon-home-bar-retract'"></i>
+                <div class="contactBox" v-show="aboutSbox"  @mouseout="aboutSboxFunOut()">
+                    <div to="" class="contacttext" style="margin-top:0" @click="aboutSl('关于我们')" >关于我们</div>
+                    <div to="" class="contacttext" @click="aboutSl('联系我们')">联系我们</div>
+                    <div to="" class="contacttext" @click="aboutSl('咨询中心')">咨询中心</div>
+                    <div to="" class="contacttext" @click="aboutSl('帮助中心')">帮助中心</div>
+                </div>
+            </div>
         </div>
         <div class="navigation-nav3">登录</div>
     </div>
@@ -21,6 +38,12 @@ export default {
             isNav:true,
             isnavigationBox:true,
             isOpen:false,
+            aboutSbox:false,
+            productSbox:false,
+            product:'产品与服务',
+            about:'关于我们',
+            isActive :true,
+            isActiveT:true,
             opacitys:{
                 opacity:1
             }
@@ -37,8 +60,11 @@ export default {
               // 获取滚动距离
               var top = document.documentElement.scrollTop || document.body.scrollTop;
               // 如果滚动距离大于900 让导航条出现
-               console.log(top);
-              if(top>900){
+               if(top>0){
+                   this.productSbox =false
+                    this.aboutSbox =false
+               }
+              if(top>500){
                   // 导航条 isNav = true
                  this.isNav = true;                 
                  this.isOpen = true
@@ -50,6 +76,37 @@ export default {
                  this.isnavigationBox = true
               }
               
+          },
+          productSboxFunOut(){
+              this.productSbox =false
+              this.isActive = false
+              this.aboutSbox =false
+          },
+          aboutSboxFunOut(){
+               this.aboutSbox =false
+              this.productSbox = false
+              this.isActiveT = false
+          },
+          productSboxFun(){
+              this.productSbox =true
+              this.isActive = true
+              this.aboutSbox =false
+              this.isActiveT = false
+          },
+          aboutSboxFun(){
+              this.aboutSbox =true
+              this.productSbox = false
+              this.isActiveT = true
+              this.isActive = false
+          },
+          productSl(e){
+              this.productSbox =false
+              this.aboutSbox =false
+          },
+          aboutSl(e){
+              this.productSbox =false
+              this.aboutSbox =false
+            //   this.about = e
           }
     }
 }
@@ -66,7 +123,6 @@ export default {
         align-items:center;
         cursor: pointer;
         position: fixed;
-        margin-top: .5rem;
         background:#ffffff ;
         z-index: 1;
         padding-left: 2rem;
@@ -86,6 +142,7 @@ export default {
         margin-top: .5rem;
         background:#ffffff ;
         z-index: 1;
+         box-shadow: 0 .1rem .25rem 0 rgba(4,37,83,0.08);
     }
     .navigation-nav1{
         width: 1.95rem;
@@ -121,11 +178,36 @@ export default {
         text-align: center;
         line-height: .575rem;
     }
+		.navigation-nav3:hover{
+			background: #4DACFF;
+		}
+		.navigation-nav3:active{
+			background: #006ECD;
+		}
     .nav-text{
         color:#33363E;
-    
     }
     .nav-text:hover{
+        color: #0089FF;
+    }
+    i{
+        font-size: .175rem;
+    }
+    .contactBox{
+        position: absolute;
+        padding: .5rem;
+        background:#ffffff;
+        top: 1.05rem;
+        box-shadow: 0 .1rem .25rem 0 rgba(4,37,83,0.08);
+    }
+    .contacttext{
+        font-family: MicrosoftYaHei;
+        font-size: .25rem;
+        color: #565A66;
+        width: 100%;
+        line-height: .688rem;
+    }
+    .contacttext:hover{
         color: #0089FF;
     }
 </style>

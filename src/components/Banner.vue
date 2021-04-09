@@ -44,7 +44,6 @@ export default {
         height: .875rem;
         background: #0089FF;
         border-radius: .025rem;
-
         font-family: MicrosoftYaHei;
         font-size: .325rem;
         color: #FFFFFF;
@@ -52,4 +51,10 @@ export default {
         text-align: center;
         line-height: .875rem;
     }
+		.btn:hover{
+			background: #4DACFF;
+		}
+		.btn:active{
+			background: #006ECD;
+		}
 </style>
