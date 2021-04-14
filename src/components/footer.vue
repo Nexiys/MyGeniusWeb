@@ -1,23 +1,58 @@
 <template>
     <div class="Contentfive-box">
-        <div class="f-box">
-            <div class="f-t-box f-t-img"></div>
-            <div class="f-t-box f-t-text">
-                <h4>23套测评题目全维更权威</h4>
-                <p>牵手清华、北大、人大等多位心理学教授、博士进行研发的23套测评题型为政府、学校、家长、孩子通过全面的、权威的心理测评报告，多个维度进行分析</p>
+        <div class="fi-b-box">
+            <div class="fi-bot-box">
+                <h4>联系我们</h4>
+                <p>联系电话：400-820-8820</p>
+                <p>公司邮箱：tswc@tcjy.cn</p>
+                <p>投诉建议：483920(QQ)</p>
             </div>
-            <div class="btn-left">
-                <i class="icon-about-information-last"></i>
+            <div class="fi-bot-box">
+                <h4>服务条款</h4>
+                <p>《天生我才用户协议》</p>
+                <p>《网站使用规范》</p>
+                <p>《隐私政策》</p>
             </div>
-            <div class="btn-right">
-                <i class="icon-about-information-next"></i>
+            <div class="fi-bot-box fi-bot-box3 ">
+                <h4>备案信息</h4>
+                <p>京ICP备2021314-1</p>
+                <p>公安网备案202013120</p>
+                <p>增值电信运营许可证AI-202013132</p>
+            </div>
+            <div class="fi-bot-box">
+                <h4>关注我们</h4>
+                <div class="icon-img-box">
+                    <div  @mouseover="BfunShow" @mouseout="BfunShow" >  
+                        <i class="icon-home-footer-wechat"></i>
+                    </div>
+                    <div><i class="icon-home-footer-tiktok"></i></div>
+                    <div><i class="icon-home-footer-weibo"></i></div>
+                </div>
+                <div class="webchat-img" v-show="ishow">
+                   <h6>微信订阅号</h6>
+                   <img src="../assets/images/home-footer-QRcode.png" alt="">
+                </div>
+                <!-- <div class="webchat-img2" v-show="ishow">
+                   <h6>抖音</h6>
+                   <img src="../assets/images/home-footer-QRcode.png" alt="">
+                </div> -->
+                <!-- <div class="webchat-img3" v-show="ishow">
+                   <h6>微博</h6>
+                   <img src="../assets/images/home-footer-QRcode.png" alt="">
+                </div> -->
+                <div class="icon-img-box">
+                    <p>微信</p>
+                    <p>抖音</p>
+                    <p>微博</p>
+                </div>
             </div>
         </div>
+        <div class="footer">版权所有 © 2021京ICP备2020046658号-1</div>
     </div>
 </template>
 <script>
 export default {
-  name: 'Contentfive',
+  name: 'FooterAdd',
   data(){
         return {
             ishow:false
@@ -116,10 +151,11 @@ export default {
 
     .Contentfive-box{
       width: 100%;
+ 
       position: relative;
       background: #042553;
-      padding-top: 2.6375rem;
-
+      padding-top: 1.2625rem;
+  
     }
     .fi-b-box{
         width: 13.25rem;

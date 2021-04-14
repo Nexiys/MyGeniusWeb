@@ -7,6 +7,7 @@
     <Contentthree/>
     <Contentfour/>
     <Contentfive/>
+    <FooterAdd/>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import Contenttwo from '@/components/Contenttwo.vue'
 import Contentthree from '@/components/Contentthree.vue'
 import Contentfour from '@/components/Contentfour.vue'
 import Contentfive from '@/components/Contentfive.vue'
+import FooterAdd from '@/components/footer.vue'
 export default {
   name: 'Home',
   components: {
@@ -28,7 +30,8 @@ export default {
     Contenttwo,
     Contentthree,
     Contentfour,
-    Contentfive
+    Contentfive,
+    FooterAdd
   }
 }
 </script>

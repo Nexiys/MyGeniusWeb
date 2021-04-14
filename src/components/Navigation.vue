@@ -4,7 +4,7 @@
             <img src="" alt="">
         </div>
         <div class="navigation-nav2">
-            <router-link to="" class="nav-text">首页</router-link>
+            <router-link to="/" class="nav-text" :class="{'textColor': this.$route.name=='Home'}" >首页</router-link>
             <router-link to="" class="nav-text">强基计划</router-link>
             <div class="nav-text" @mouseover="productSboxFun()" >{{product}} 
                 <i  v-bind:class="isActive? 'icon-home-bar-open':'icon-home-bar-retract'"></i>
@@ -16,10 +16,10 @@
                     <div to="" class="contacttext" @click="productSl('学能测评及提升系统')">学能测评及提升系统</div>
                 </div>
             </div>
-            <div class="nav-text" @mouseover="aboutSboxFun()">{{about}}
+            <div class="nav-text" @mouseover="aboutSboxFun()" :class="{'textColor': this.$route.name=='About'}">{{about}}
                 <i v-bind:class="isActiveT? 'icon-home-bar-open':'icon-home-bar-retract'"></i>
                 <div class="contactBox" v-show="aboutSbox"  @mouseout="aboutSboxFunOut()">
-                    <div to="" class="contacttext" style="margin-top:0" @click="aboutSl('关于我们')" >关于我们</div>
+                    <div to="" class="contacttext" style="margin-top:0" @click="aboutSl('关于我们','/about')" >关于我们</div>
                     <div to="" class="contacttext" @click="aboutSl('联系我们')">联系我们</div>
                     <div to="" class="contacttext" @click="aboutSl('咨询中心')">咨询中心</div>
                     <div to="" class="contacttext" @click="aboutSl('帮助中心')">帮助中心</div>
@@ -44,6 +44,7 @@ export default {
             about:'关于我们',
             isActive :true,
             isActiveT:true,
+            iscolor:true,
             opacitys:{
                 opacity:1
             }
@@ -103,10 +104,10 @@ export default {
               this.productSbox =false
               this.aboutSbox =false
           },
-          aboutSl(e){
+          aboutSl(e,s){
               this.productSbox =false
               this.aboutSbox =false
-            //   this.about = e
+              this.$router.push(s);
           }
     }
 }
@@ -208,6 +209,9 @@ export default {
         line-height: .688rem;
     }
     .contacttext:hover{
+        color: #0089FF;
+    }
+    .textColor{
         color: #0089FF;
     }
 </style>
