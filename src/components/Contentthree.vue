@@ -1,128 +1,131 @@
 <template>
-    <div class="Contentthree-box">
-        <h2>个性画像的优势</h2>
-        <p>最大程度反映孩子心理健康及性格倾向，帮助学校、家长全面了解孩子并做定向培养</p>
-        <div class="Contentthree-b-box">
-            <div class="l-box">
-                <div class="iconimg" style="background: #0089FF">
-                    <i class="icon-home-advantage-assess"></i>
-                </div>
-                <h3>多元化测评</h3>
-                <p>通过自主研发的AI技术结合心理学专家博士研发的全维心理测评，全维度多元化反映孩子心理健康程度及性格倾向，包括适合发展的职业、需提升的方向、日常生活中家长及孩子的注意事项、孩子有可能存在的心理问题等</p>
+    <div class="content-three">
+        <h2>专家团队</h2>
+        <div class="content-three-box">
+          <div class="img1">
+            <div class="text-b">
+              <h3>张曼文</h3>
+              <p>国内著名心理学家</p>
             </div>
-            <div class="l-box">
-                <div class="iconimg" style="background: #41B983">
-                    <i class="icon-home-advantage-data" ></i>
-                </div>
-                <h3>大数据+个性化</h3>
-                <p>依托AI智适应学习技术加心理测评大数据，同时结合个性化的测评题库，为孩子、学生、家长、学校及政府输出专业的、权威的、准确的、多元的青少年心理健康测评报考，挖掘潜在人才、发现潜在问题、个性化培养输送</p>
-            </div>
-            <div class="l-box">
-                <div class="iconimg" style="background:#FAA64F">
-                    <i class="icon-home-advantage-unscramble"></i>
-                </div>
-                <h3>智能解读</h3>
-                <p>23套题型、八个维度分析、反应多种性格及心理倾向，结合新高考选科、志愿填报、职业发展给予家长、学校、政府及孩子最专业的报告解读及方向建议，帮助家长更全面、深度的了解孩子，找到适合孩子的发展方向</p>
-            </div>
-            <div class="l-box">
-                <div class="iconimg" style="background:#EE5C4A">
-                    <i class="icon-home-advantage-cooperation"></i>
-                </div>
-                <h3>权威合作</h3>
-                <p>23套测评题目由北大、清华、人大、复旦等多位心理学专家、教授、博士联合完成开发，由中国老教授协会提供全程指导及建议并邀请相关部委领导监督，确保测评结果的专业性、权威性、准确性</p>
-            </div>
-            
+          </div>
+          <div class="img2">
+						<div class="text-b">
+							<h3>刘海安</h3>
+              <p>清华大学心理学院教授</p>
+						</div>
+					</div>
+          <div class="img3">
+						<div class="text-b">
+							<h3>王博延</h3>
+              <p>北京大学心理学院教授</p>
+						</div>
+					</div>
+          <div class="img4">
+						<div class="text-b">
+							<h3>林沛菡</h3>
+              <p>北京大学心理学院教授</p>
+						</div>
+					</div>
+          <div class="img5">
+						<div class="text-b">
+							<h3>施乐菱</h3>
+              <p>国内著名心理学家</p>
+						</div>
+					</div>
+          <div class="img6">
+						<div class="text-b">
+							<h3>韩智渊</h3>
+              <p>国内著名心理学家</p>
+						</div>
+					</div>
         </div>
     </div>
 </template>
 <script>
 export default {
-  name: 'Contentthree'
+  name: 'Contentthree',
+    data(){
+        return {
+            bannerImg:"",
+        }
+    },
+    methods:{
+
+    }
 }
 </script>
 <style scoped>
-    .Contentthree-box{
-      width: 100%;
-      height: 7.5rem;
-      background: url(../assets/images/home-advantage.png);
-      background-size: 100% 100%;
-      padding-top: 1.25rem;
-      position: relative;
-    }
-    h2{
-        font-family: MicrosoftYaHei-Bold;
-        font-size: .525rem;
-        color: #FFFFFF;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: .525rem;
-    }
-    .Contentthree-box p{
-        margin-top: .375rem;
-        font-family: MicrosoftYaHei;
-        font-size: .25rem;
-        color: #FFFFFF;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: .325rem;
-    }
-    .Contentthree-b-box{
-        width: 16rem;
-        height: 5.575rem;
-        position: absolute;
-        left: 50%;
-        margin-left: -8rem;
-        margin-top: 1.4375rem;
-        display: flex;
-        justify-content:space-between;
-        
-    }
-    .l-box{
-        width: 3.7125rem;
-        height: 5.575rem;
-        background:#ffffff;
-        padding: 0 .5rem .625rem .5rem;
-        position: relative;
-        box-shadow: 0 .1rem .25rem -0.075rem rgba(4,37,83,0.08);
-        border: .025rem solid #ffffff;
-    }
-    .l-box:hover{
-        border: .025rem solid #0089FF;
-        box-shadow: 0 .1rem .25rem -0.075rem rgba(4,37,83,0.08);
-    }
-    .iconimg{
-        position: absolute;
-        width: 1.375rem;
-        height: 1.375rem;
-        border-radius: 50%;
-        box-shadow: 0 14px 20px -6px rgba(0,137,255,0.40);
-        left: 50%;
-        margin-left: -0.6875rem;
-        top: -0.6875rem;
-        display: flex;
-        justify-content:center;
-        align-items:center;
-    }
-    .l-box h3{
-        margin-top: 1.2rem;
-        font-family: MicrosoftYaHei;
-        font-size: .325rem;
-        color: #33363E;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: .35rem;
-    }
-    .l-box p{
-        margin-top: .25rem;
-        font-family: MicrosoftYaHei;
-        font-size: .225rem;
-        color: #565A66;
-        letter-spacing: 0;
-        text-align: justify;
-        line-height: .35rem;
-    }
-    i{
-        font-size: .7rem;
-        color: #FFFFFF;
-    }
+ .content-three{
+   padding-top: 3.0875rem;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   padding-bottom: 1.25rem;
+   background: #ffffff;
+ }
+ h2{
+    font-family: MicrosoftYaHei-Bold;
+    font-size: .525rem;
+    color: #33363E;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: .525rem;
+ }
+ .content-three-box{
+		/* height: 14.25rem; */
+		background: #ffffff;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap:wrap;
+ }
+.img1,.img2,.img3,.img4,.img5,.img6{
+		width: 5.075rem;
+		height: 6.75rem;
+		background-size: 100% 100%;
+		margin-top: .75rem;
+		position: relative;
+ }
+.img1{
+		background: #FFFFFF  url(../assets/images/about-us-expert1.png) no-repeat;
+}
+.img2{
+		background: #FFFFFF  url(../assets/images/about-us-expert2.png) no-repeat;
+}
+.img3{
+		background: #FFFFFF  url(../assets/images/about-us-expert3.png) no-repeat;
+}
+.img4{
+		background: #FFFFFF  url(../assets/images/about-us-expert4.png) no-repeat;
+}
+.img5{
+		background: #FFFFFF  url(../assets/images/about-us-expert5.png) no-repeat;
+}
+.img6{
+		background: #FFFFFF  url(../assets/images/about-us-expert6.png) no-repeat;
+}
+.text-b{
+		width: 5.075rem;
+		height: 1.575rem;
+		background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.80) 100%);
+		box-shadow: 0 8px 20px -6px rgba(4,37,83,0.08);
+		position: absolute;
+		bottom: 0;
+		padding: .375rem;
+ }
+ h3{
+    font-family: MicrosoftYaHei-Bold;
+    font-size: .375rem;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: .375rem;
+    text-align: left;
+ }
+ p{
+    font-family: MicrosoftYaHei;
+    font-size: .25rem;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: .25rem;
+    margin-top: .2rem;
+ }
 </style>

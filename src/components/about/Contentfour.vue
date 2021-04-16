@@ -19,7 +19,12 @@
 </template>
 <script>
 export default {
-  name: 'Contentfour'
+  name: 'Contentfour',
+    data(){
+        return {
+            ishow:false
+        }
+    },
 }
 </script>
 <style scoped>

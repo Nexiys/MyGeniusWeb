@@ -15,7 +15,12 @@
 </template>
 <script>
 export default {
-  name: 'Contenttwo'
+  name: 'Contenttwo',
+    data(){
+        return {
+            ishow:false
+        }
+    },
 }
 </script>
 <style scoped>

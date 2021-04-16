@@ -12,7 +12,12 @@
 </template>
 <script>
 export default {
-  name: 'Contentone'
+  name: 'Contentone',
+    data(){
+        return {
+            ishow:false
+        }
+    },
 }
 </script>
 <style scoped>

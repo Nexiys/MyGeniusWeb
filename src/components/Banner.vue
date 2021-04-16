@@ -2,12 +2,17 @@
     <div class="banner-box">
         <h2>青少年心理教育与成长引领AI云平台</h2>
         <p>专注青少年心理健康 | 提供个性化教育指导</p>
-        <router-link class="btn" to="">进入系统</router-link>
+        <a class="btn" href=" http://www.mygenius.cn">进入系统</a>
     </div>
 </template>
 <script>
 export default {
-  name: 'Banner'
+  name: 'Banner',
+    data(){
+        return {
+            ishow:false
+        }
+    },
 }
 </script>
 <style scoped>

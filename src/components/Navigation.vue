@@ -16,17 +16,17 @@
                     <div to="" class="contacttext" @click="productSl('学能测评及提升系统')">学能测评及提升系统</div>
                 </div>
             </div>
-            <div class="nav-text" @mouseover="aboutSboxFun()" :class="{'textColor': this.$route.name=='About'}">{{about}}
+            <div class="nav-text" @mouseover="aboutSboxFun()" :class="{'textColor': this.$route.name=='About'||'Contact' || 'HelpCenter' || 'Information'||'Detail'}">{{about}}
                 <i v-bind:class="isActiveT? 'icon-home-bar-open':'icon-home-bar-retract'"></i>
                 <div class="contactBox" v-show="aboutSbox"  @mouseout="aboutSboxFunOut()">
                     <div to="" class="contacttext" style="margin-top:0" @click="aboutSl('关于我们','/about')" >关于我们</div>
-                    <div to="" class="contacttext" @click="aboutSl('联系我们')">联系我们</div>
-                    <div to="" class="contacttext" @click="aboutSl('咨询中心')">咨询中心</div>
-                    <div to="" class="contacttext" @click="aboutSl('帮助中心')">帮助中心</div>
+                    <div to="" class="contacttext" @click="aboutSl('联系我们','/contact')">联系我们</div>
+                    <div to="" class="contacttext" @click="aboutSl('资讯中心','information')">资讯中心</div>
+                    <div to="" class="contacttext" @click="aboutSl('帮助中心','/helpcenter')">帮助中心</div>
                 </div>
             </div>
         </div>
-        <div class="navigation-nav3">登录</div>
+        <a class="navigation-nav3"   href=" http://www.mygenius.cn">登录</a>
     </div>
 </template>
 <script>

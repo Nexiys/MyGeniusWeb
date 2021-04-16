@@ -5,7 +5,12 @@
 </template>
 <script>
 export default {
-  name: 'Aboutbanner'
+  name: 'Aboutbanner',
+    data(){
+        return {
+            ishow:false
+        }
+    },
 }
 </script>
 <style scoped>
